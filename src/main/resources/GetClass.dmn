@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="getClass" name="Get Class" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.4.0">
+  <decision id="getClas" name="Class">
+    <decisionTable id="DecisionTable_17snr1a">
+      <input id="InputClause_0c60vwi">
+        <inputExpression id="LiteralExpression_1yb3yyp" typeRef="long">
+          <text>LoanAmount</text>
+        </inputExpression>
+      </input>
+      <input id="Input_1" label="Results" biodi:width="150">
+        <inputExpression id="InputExpression_1" typeRef="integer">
+          <text>CreditScore</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Class" name="Class" typeRef="string" />
+      <rule id="DecisionRule_1kutlte">
+        <inputEntry id="UnaryTests_0jptf6z">
+          <text>&lt;=500000</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qx73s0">
+          <text>&gt;=750</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_049vuhh">
+          <text>"Approve"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0l62grb">
+        <inputEntry id="UnaryTests_0cmrjnc">
+          <text>&gt;500000</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1f19qux">
+          <text>&gt;=750</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1h3p6jx">
+          <text>"Pending"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0mbns9b">
+        <inputEntry id="UnaryTests_14e14v1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gysihm">
+          <text>&lt;750</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1v6p55h">
+          <text>"Reject"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="getClas">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

@@ -1,0 +1,4 @@
+com\Harsha\PersonalLoanApplication\ProcessScenarioTest.class
+com\Harsha\PersonalLoanApplication\InMemoryH2Test.class
+com\Harsha\PersonalLoanApplication\ProcessTestCoverageProcessEnginePlugin.class
+com\Harsha\PersonalLoanApplication\ProcessUnitTest.class
